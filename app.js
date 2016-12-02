@@ -7,6 +7,7 @@ var express = require('express')
   , routes = require('./routes')
   , http = require('http')
   , path = require('path')
+  , robots = require('express-robots')
   , config = require('./config');
 
 var app = express();
@@ -15,6 +16,8 @@ app.configure(function(){
   app.set('port', process.env.PORT || config.port);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'hjs');
+  if(config.robots) 
+    app.use(robots(config.robots));
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());

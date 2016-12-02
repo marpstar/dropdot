@@ -8,3 +8,4 @@ module.exports.redirect_host = "http://localhost:3000/"; // Host to redirect aft
 module.exports.host = "s3.amazonaws.com"; // S3 provider host
 module.exports.bucket_dir = "uploads/";
 module.exports.max_filesize = 20971520; // Max filesize in bytes (default 20MB)
+module.exports.robots = false; // options object to pass through to express-robots middleware, e.g. { UserAgent: '*', Disallow: '/' }

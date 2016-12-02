@@ -13,7 +13,8 @@
     "node-uuid": "*",
     "crypto": "*",
     "mime": "*",
-    "moment": "*"
+    "moment": "*",
+    "express-robots": "0.1.6"
   },
   "keywords": ["uploader", "app"],
   "repository": "git://github.com/alfg/dropdot"
